@@ -1,3 +1,16 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Jekyll Specific
+_site/
+
+# Ruby
+Gemfile.lock
