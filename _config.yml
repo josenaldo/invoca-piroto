@@ -5,7 +5,7 @@ description: "A lista de nomes do Capeta mais completa da internet"
 baseurl: ""
 url: "http://josenaldo.github.io/nomesdocapeta/"
 title_description: "A maior lista de nomes do Capeta da Internet. E crescendo!."
-title_image: 
+title_image: "/assets/images/user.png"
 google_analytics: 
 disqus_account: 
 github_repository: https://github.com/josenaldo/nomesdocapeta
