@@ -1,6 +1,8 @@
 # Lista de Nomes do Capeta
 
-## Construção da imagem
+## Comandos úteis
+
+### Construção da imagem
 
 Para construir a imagem do contêiner, usamos o comando abaixo, na pasta do projeto.
 
@@ -8,7 +10,7 @@ Para construir a imagem do contêiner, usamos o comando abaixo, na pasta do proj
 docker build -t nomesdocapeta .
 ```
 
-## Execução do contêiner
+### Execução do contêiner
 
 Criar, dentro da pasta do projeto, a pasta `vendor/bundle`
 
@@ -18,7 +20,7 @@ Então, executar o contêiner com o seguinte comando:
 docker run --rm -it -v "/d/repositorios/nomesdocapeta:/srv/jekyll" -v "/d/repositorios/nomesdocapeta/vendor/bundle:/usr/local/bundle" -p 4000:4000 --name nomesdocapeta nomesdocapeta bash
 ```
 
-## Pra executar o servidor de desenvolvimento
+### Pra executar o servidor de desenvolvimento
 
 Executa o servidor do jekyll.
 
@@ -27,6 +29,12 @@ jekyll serve --livereload --watch --force-polling
 ```
 
 Verifique, no Kitematic, qual a o IP para acessar o container.
+
+### Conectando num container que está rodando
+
+```shell
+docker exec -it nomesdocapeta bash
+```
 
 ## Referências
 
