@@ -1,9 +1,12 @@
+---
+---
+
 var DevilNames = (function () {
     var self = this;
     self.names = null;
 
     var init = function (callback) {
-        $.get("/assets/js/data/nomes.json", function (data) {
+        $.get("{{ site.baseurl }}/assets/js/data/nomes.json", function (data) {
             self.names = data;
             if (callback != null) {
                 callback(data);

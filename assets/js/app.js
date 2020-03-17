@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     
 
-   $( "#button-random-name" ).click(function() {
+   $("#button-random-name" ).click(function() {
         var newName = DevilNames.getRandomName();
         document.getElementById("devil-name").innerHTML = newName;        
     });
