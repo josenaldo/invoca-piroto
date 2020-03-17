@@ -11,41 +11,13 @@ make-smaller-titles: true
 
                 <h2>Qual o nome do Imundiçado?</h2>
 
-                <div id="devil-name">COISO</div>
+                <div id="devil-name" class="nome-do-capeta">O Coiso 2</div>
 
-                <input id="button-random-name" type="button" value="Novo nome">
+                <input id="button-random-name" type="button" value="Invoque um novo nome do Capeta!" class="btn-capeta" >
                
-
             </div>
 
         </div>
 
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-12 main content-panel">
-
-            <div class="articles">
-
-                <h2>Novidades</h2>
-
-                <ul>
-                    {% for post in site.posts limit: site.post_limit %}
-
-                    <li>
-                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                    </li>
-
-                    {% endfor %}
-                    <li>
-                        <small><i><a href="{{ site.baseurl }}/posts/">Leia mais...</a></i></small>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
+    </div>   
 </div>
