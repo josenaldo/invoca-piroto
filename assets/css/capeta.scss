@@ -56,3 +56,12 @@ $orange:         #F07241;
     font-size: 40px;
     font-weight: 700;
 }
+
+.index .row-content {
+    margin-top: 0px;
+}
+
+.index .row-content .content-panel:nth-of-type(1) {
+    margin-top: 0;
+    padding-top: 30px;
+}
