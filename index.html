@@ -9,7 +9,26 @@ make-smaller-titles: true
 
             <div class="articles">
 
-                <h2>Latest Articles</h2>
+                <h2>Qual o nome do Imundiçado?</h2>
+
+                <div id="devil-name">COISO</div>
+
+                <input id="button-random-name" type="button" value="Novo nome">
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12 main content-panel">
+
+            <div class="articles">
+
+                <h2>Novidades</h2>
 
                 <ul>
                     {% for post in site.posts limit: site.post_limit %}
@@ -21,13 +40,12 @@ make-smaller-titles: true
 
                     {% endfor %}
                     <li>
-                        <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
+                        <small><i><a href="{{ site.baseurl }}/posts/">Leia mais...</a></i></small>
                     </li>
                 </ul>
 
             </div>
 
         </div>
-
     </div>
 </div>
