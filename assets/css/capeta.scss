@@ -19,9 +19,9 @@ $red:            #C04848;
 $orange:         #F07241;
 
 /* Responsive sizes */
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
+$screen-sm-min: 600px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
 
 .btn-capeta {
     word-wrap:break-word;
@@ -70,12 +70,16 @@ $screen-lg-min: 1200px;
     max-width: 100%;
     text-align: center;
 
+    @media (max-width: $screen-sm-min - 1) {
+        font-size: 25px;
+    }
+
     @media (min-width: $screen-sm-min) {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     @media (min-width: $screen-md-min) {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     @media (min-width: $screen-lg-min) {
