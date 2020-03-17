@@ -18,7 +18,15 @@ $regular-purple: #601848;
 $red:            #C04848;
 $orange:         #F07241;
 
+/* Responsive sizes */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
 .btn-capeta {
+    word-wrap:break-word;
+    white-space: normal !important;
+    display: inline-block;
     outline: none;
     background-color: $dark;
     border-color: $light-blue;
@@ -35,6 +43,8 @@ $orange:         #F07241;
     border-style: solid;
     border-width: 3px;
     margin-top: 30px;
+
+    max-width: 90%;
 
     &:hover {
         background-color: $darker;
@@ -55,6 +65,22 @@ $orange:         #F07241;
     color: $light;
     font-size: 40px;
     font-weight: 700;
+    word-wrap:break-word;
+    white-space: normal !important;
+    max-width: 100%;
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        font-size: 30px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 40px;
+    }
 }
 
 .index .row-content {
