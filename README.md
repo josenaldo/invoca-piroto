@@ -28,7 +28,7 @@ Executa o servidor do jekyll.
 jekyll serve --livereload --watch --force-polling
 ```
 
-Verifique, no Kitematic, qual a o IP para acessar o container.
+Verifique, no Kitematic, qual a o IP para acessar o container ou execute, no terminal do host, o comando `docker-machine ip`
 
 ### Conectando num container que está rodando
 
