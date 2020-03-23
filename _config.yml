@@ -13,7 +13,7 @@ github_repository: https://github.com/josenaldo/invocador-de-nomes-do-capeta
 post_limit: 5
 
 #Twitter
-twiter:
+twitter:
   username: vudureverso
   card: summary
 
