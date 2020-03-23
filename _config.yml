@@ -4,7 +4,7 @@ title: "Invocador de Nomes do Capeta"
 tagline: "Pq xingar de satanás não é suficiente"
 description: "O Invocador de Nomes do Capeta permite que você invoque um nome do capeta aleatório!"
 baseurl: "/invocador-de-nomes-do-capeta"
-url: "http://josenaldo.github.io/invocador-de-nomes-do-capeta/"
+url: "http://josenaldo.github.io"
 title_description: "Clique para invocar um novo nome do Tinhoso!"
 title_image: "/invocador-de-nomes-do-capeta/assets/images/user.png"
 google_analytics: 
@@ -40,6 +40,7 @@ linkedin_link: https://www.linkedin.com/in/josenaldo/
 facebook_link: https://www.facebook.com/josenaldo.matos
 email: josenaldo@gmail.com
 
+
 # Footer
 footer_left: 
 footer_right: 
@@ -57,3 +58,14 @@ exclude: [vendor]
 #Plugins
 plugins:
   - jekyll-seo-tag
+
+# Valores default
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      image: 
+        path: "/assets/images/og-image.png"
+        width: "1200"
+        height: "630"
