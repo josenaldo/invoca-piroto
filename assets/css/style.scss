@@ -263,12 +263,12 @@ ul {
 		font-size: 30px;
 
 		@media (min-width: $screen-sm-min) {
-			font-size: 52px;
+			font-size: 30px;
 			margin-top: 0px;
 		}
 
 		@media (min-width: $screen-md-min) {
-			font-size: 60px;
+			font-size: 40px;
 			margin-top: -20px;
 		}
 	}
@@ -433,11 +433,7 @@ ul {
 
 	.content-panel {
 		padding-left: 10px;
-		padding-right: 10px;
-		@media (min-width: $screen-md-min) {
-			padding-left: 30px;
-			padding-right: 30px;
-		}
+		padding-right: 10px;		
 	}
 }
 

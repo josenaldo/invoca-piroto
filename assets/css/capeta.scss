@@ -95,3 +95,27 @@ $screen-lg-min: 992px;
     margin-top: 0;
     padding-top: 30px;
 }
+
+.about-image {
+   
+
+    @media (max-width: $screen-sm-min - 1) {
+        width: 90px;
+        height: 90px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        width: 120px;
+        height: 120px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        width: 140px;
+        height: 140px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        width: 150px;
+        height: 150px;
+    }
+}

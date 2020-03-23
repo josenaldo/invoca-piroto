@@ -1,10 +1,10 @@
 # Site settings
-title: "Nomes do Capeta"
+title: "Invocador de Nomes do Capeta"
 email: josenaldo@gmail.com
 description: "A lista de nomes do Capeta mais completa da internet"
 baseurl: "/nomesdocapeta"
 url: "http://josenaldo.github.io/nomesdocapeta/"
-title_description: "Clique para conhecer um dos nomes do Tinhoso!"
+title_description: "Clique para invocar um novo nome do Tinhoso!"
 title_image: "/nomesdocapeta/assets/images/user.png"
 google_analytics: 
 disqus_account: 
