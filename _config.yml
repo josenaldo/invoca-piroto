@@ -2,13 +2,13 @@
 title: "Invocador de Nomes do Capeta"
 email: josenaldo@gmail.com
 description: "A lista de nomes do Capeta mais completa da internet"
-baseurl: "/nomesdocapeta"
-url: "http://josenaldo.github.io/nomesdocapeta/"
+baseurl: "/invocador-de-nomes-do-capeta"
+url: "http://josenaldo.github.io/invocador-de-nomes-do-capeta/"
 title_description: "Clique para invocar um novo nome do Tinhoso!"
-title_image: "/nomesdocapeta/assets/images/user.png"
+title_image: "/invocador-de-nomes-do-capeta/assets/images/user.png"
 google_analytics: 
 disqus_account: 
-github_repository: https://github.com/josenaldo/nomesdocapeta
+github_repository: https://github.com/josenaldo/invocador-de-nomes-do-capeta
 post_limit: 5
 
 # Social usernames/URLs
@@ -16,14 +16,12 @@ twitter_username: vudureverso
 github_username:  josenaldo
 instagram_username: vudureverso
 reddit_username: vudureverso
-linkedin_link: http://josenaldo.github.io/nomesdocapeta/
-google_plus_link: http://josenaldo.github.io/nomesdocapeta/
-stackoverflow_link: http://josenaldo.github.io/nomesdocapeta/
+linkedin_link: https://www.linkedin.com/in/josenaldo/
 facebook_link: https://www.facebook.com/josenaldo.matos
 
 # Footer
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+footer_left: 
+footer_right: 
 
 # Build settings
 markdown: kramdown
