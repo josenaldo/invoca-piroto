@@ -1,7 +1,8 @@
 # Site settings
+
 title: "Invocador de Nomes do Capeta"
-email: josenaldo@gmail.com
-description: "A lista de nomes do Capeta mais completa da internet"
+tagline: "Pq xingar de satanás não é suficiente"
+description: "O Invocador de Nomes do Capeta permite que você invoque um nome do capeta aleatório!"
 baseurl: "/invocador-de-nomes-do-capeta"
 url: "http://josenaldo.github.io/invocador-de-nomes-do-capeta/"
 title_description: "Clique para invocar um novo nome do Tinhoso!"
@@ -11,6 +12,25 @@ disqus_account:
 github_repository: https://github.com/josenaldo/invocador-de-nomes-do-capeta
 post_limit: 5
 
+#Twitter
+twiter:
+  username: vudureverso
+  card: summary
+
+#logo
+logo: "/invocador-de-nomes-do-capeta/assets/images/user.png"
+
+social:
+  name: Vudu Reverso
+  links:
+    - https://twitter.com/vudureverso
+    - https://www.facebook.com/josenaldo.matos
+    - https://www.linkedin.com/in/josenaldo/
+    - https://github.com/josenaldo
+
+lang: pt-BR
+author: vudureverso
+
 # Social usernames/URLs
 twitter_username: vudureverso
 github_username:  josenaldo
@@ -18,6 +38,7 @@ instagram_username: vudureverso
 reddit_username: vudureverso
 linkedin_link: https://www.linkedin.com/in/josenaldo/
 facebook_link: https://www.facebook.com/josenaldo.matos
+email: josenaldo@gmail.com
 
 # Footer
 footer_left: 
@@ -32,3 +53,7 @@ kramdown:
 
 permalink: pretty
 exclude: [vendor]
+
+#Plugins
+plugins:
+  - jekyll-seo-tag
