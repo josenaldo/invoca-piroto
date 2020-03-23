@@ -1,6 +1,5 @@
 ---
 ---
-
 var DevilNames = (function () {
     var self = this;
     self.names = null;

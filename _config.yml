@@ -62,6 +62,10 @@ plugins:
 # Valores default
 defaults:
   - scope:
+      path: "assets"
+    values:
+      layout: "assets"      
+  - scope:
       path: ""
     values:
       layout: "default"
