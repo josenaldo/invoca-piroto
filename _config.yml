@@ -15,7 +15,7 @@ post_limit: 5
 #Twitter
 twitter:
   username: vudureverso
-  card: summary
+  card: summary_large_image
 
 #logo
 logo: "/invocador-de-nomes-do-capeta/assets/images/logo.png"
