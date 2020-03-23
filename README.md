@@ -1,4 +1,4 @@
-# Lista de Nomes do Capeta
+# Invocador de Nomes do Capeta
 
 ## Comandos úteis
 
