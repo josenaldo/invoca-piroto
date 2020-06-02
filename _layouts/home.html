@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+  {% include navbar.html %}
+
+  <nav aria-label="breadcrumb" class="home-breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">
+        Home
+      </li>
+    </ol>
+  </nav>
+
+  {% include banner.html %}
+
+  <main role="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+
+  {% include gtag.html %}
+</body>
+
+</html>

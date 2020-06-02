@@ -1,18 +1,12 @@
-<div class="container-fluid index">
-    <div class="row">
-        <div class="col-md-12 main content-panel">
-
-            <div class="gravatar">
-                <img src="{{ site.title_image }}" class="about-image" alt="{{ site.title }}" />
-            </div>
-
-            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
-
-            <div class="author-text">
-                {{ site.title_description }}
-            </div>
-            
-        </div>
-
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">{{ site.title }}</h1>
+        <p class="lead text-muted">
+            Descubra novos nomes do Capeta ou divirta-se com o jogo da forca do capeta!
+        </p>
+        <p>
+            <a href="{{'invocacao' | relative_url}}" class="btn btn-primary my-2">Invocar Nome</a>
+            <a href="{{'forca' | relative_url}}" class="btn btn-secondary my-2">Jogo da Forca</a>
+        </p>
     </div>
-</div>
+</section>

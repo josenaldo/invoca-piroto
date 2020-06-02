@@ -1,81 +1,100 @@
+<footer class="page-footer bg-primary text-white-50" id="sticky-footer">
+    <div class="container">
+        <div class="row">
+			<div class="col-sm">
+				<p class="social-title">Encontre esse projeto no Github</p>
+				<div class="social">
+					<ul>
+						<li>
+							<a href="https://github.com/josenaldo/invocador-de-nomes-do-capeta/" target="_new">
+								<i class="fab fa-github  fa-6x"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-<script src="{{ site.baseurl }}/assets/js/jquery-3.4.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/jquery.mmenu.min.all.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/modules/devil-names.js"></script>
-<script src="{{ site.baseurl }}/assets/js/app.js"></script>
+			<div class="col-sm">
+				<p class="social-title">Patrocine esse projeto</p>
+				<div class="social-link">
+					<p>
+						<a href="https://picpay.me/josenaldo" target="_new">
+							https://picpay.me/josenaldo
+						</a>
+					</p>
+					<p>
+						<img src="{{'assets/images/qrcode-200.png' | relative_url}}" alt="Doe para PicPay @Josenaldo" class="social-link">
+					</p>
 
-<script>hljs.initHighlightingOnLoad();</script>
-<script type="text/javascript">
-   $(document).ready(function() {
-      $("#my-menu").mmenu().on( "closed.mm", function() {
-            $(".menu-button").show();
-         });
-      $(".menu-button").click(function() {
-        $(".menu-button").hide();
-        $("#my-menu").trigger("open.mm");
-      });
-   });
-</script>
+				</div>
+			</div>
 
-{% if page.make-smaller-titles %}
-<script type="text/javascript">
-
-  function setFontSize() {
-
-    var title, dateOfTitle, fontSizeOfTitle, listOfA, listOfSmall, listOfArticlesDiv, divWidth;
-
-    listOfArticlesDiv = document.getElementsByClassName("articles");
-
-    for (i = 0; i < listOfArticlesDiv.length; i++) {
-
-      listOfA = document.getElementsByClassName("articles")[i].getElementsByTagName("a");
-      listOfSmall = document.getElementsByClassName("articles")[i].getElementsByTagName("small");
-
-      divWidth = document.getElementsByClassName("articles")[i].offsetWidth;
-
-      for (k = 0; k < listOfSmall.length; k++) {
-
-        title = $(listOfA[k]);
-        dateOfTitle = $(listOfSmall[k]);
-
-        fontSizeOfTitle = startingFontSize;
-        title.css("font-size", fontSizeOfTitle);
-
-        while (title.width() + dateOfTitle.width() >= divWidth)
-          title.css("font-size", fontSizeOfTitle -= 0.5);
-
-      }
-    }
-  }
-
-  function getStartFontSize() {
-    try {
-      startingFontSize = parseInt($(document.getElementsByClassName("articles")[0].getElementsByTagName("a")[0]).css("font-size"));
-      setFontSize();
-      window.addEventListener('resize', setFontSize, true);
-    } catch (e) {}
-  }
-
-  $(document).ready(getStartFontSize);
-
-</script>
-{% endif %}
-
-{% if site.google_analytics %}
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
-          _gaq.push(['_trackPageview']);
-  (function () {
-      var ga = document.createElement('script');
-      ga.type = 'text/javascript';
-      ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-{% endif %}
+			<div class="col-sm">
+				<p class="social-title">Social Media</p>
+				<div class="social">
+					<ul>
+						{% if site.twitter_username %}
+							<li>
+								<a href="https://www.twitter.com/{{ site.twitter_username }}" target="_new">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						{% endif %}
+					
+						{% if site.linkedin_link %}
+							<li>
+								<a href="{{ site.linkedin_link }}" target="_new" >
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+						{% endif %}
+										
+						{% if site.facebook_link %}
+							<li>
+								<a href="{{ site.facebook_link }}" target="_new">
+									<i class="fab fa-facebook"></i>
+								</a>
+							</li>
+						{% endif %}
+					
+						{% if site.github_username %}
+							<li>
+								<a href="https://github.com/{{ site.github_username }}" target="_new">
+									<i class="fab fa-github-alt"></i>
+								</a>
+							</li>
+						{% endif %}
+														
+						{% if site.instagram_username %}
+							<li>
+								<a href="https://www.instagram.com/{{ site.instagram_username }}" target="_new">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+						{% endif %}
+					
+						{% if site.reddit_username %}
+							<li>
+								<a href="https://www.reddit.com/u/{{ site.reddit_username }}" target="_new">
+									<i class="fab fa-reddit-alien"></i>
+								</a>
+							</li>
+						{% endif %}
+					
+						<li>
+							<a href="{{'feed.xml' | relative_url }}" target="_new">
+								<i class="fa fa-rss"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+        </div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			Copyright © 2020 Vudu Reverso Tudo nessa porra é reservado
+		</div>
+	  </div>
+    
+</footer>

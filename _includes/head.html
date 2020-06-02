@@ -4,12 +4,17 @@
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ site.description }}">
 
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+<!-- lazy styling -->
+<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/lazy.css">
+
+<!-- Application Style -->
 <link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/style.css" />
-<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/capeta.css" />  
-<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/jquery.mmenu.all.css" />
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/highlightjs.piperita.css">
 
 <!-- Favicons generated at http://realfavicongenerator.net/ -->
 <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/favicons/apple-icon-57x57.png">
@@ -30,11 +35,7 @@
 <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/favicons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-{% if page.content contains '<script type="math/tex' %}
-<!-- MathJax for LaTeX --> 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% endif %}
-
+<!-- Jekyll SEO -->
 {% seo %}
 
 </head>
