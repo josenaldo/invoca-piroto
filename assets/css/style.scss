@@ -1,5 +1,7 @@
 ---
 ---
+
+@import '_animation';
 $white: #FFFFFF;
 
 .home-breadcrumb {
@@ -14,6 +16,63 @@ $white: #FFFFFF;
     h1{
         color: #611F6A;
     }
+}
+
+.speech-bubble {
+	position: relative;
+	background: #611F6A;
+    border-radius: .5em;
+    margin-bottom: 50px;
+    h1{
+        color: $white;
+    }
+    padding: 20px;
+
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 53%;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-color: #611F6A;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -25px;
+	margin-bottom: -50px;
+}
+
+.btn-devil{
+
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+
+    background-image: url("{{'assets/images/user.png' | relative_url}}");
+    background-position: center;
+    border-bottom: none !important;
+    transition: all 0.5s ease-in;
+
+    //start click effect
+    &:before {
+        content: '';
+        filter: brightness(70%);
+    }
+    &:active {
+        filter: brightness(50%);
+        transition: all 0.5s ease-out;
+    }
+}
+
+.swing:hover
+{
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 .page-footer {
