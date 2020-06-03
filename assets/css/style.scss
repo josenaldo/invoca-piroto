@@ -4,6 +4,10 @@
 @import '_animation';
 $white: #FFFFFF;
 
+h1, h2, h3, h4, h5, h6{
+    color: #4d1854;
+}
+
 .home-breadcrumb {
     .breadcrumb{
         margin-bottom: 0;
@@ -73,6 +77,10 @@ $white: #FFFFFF;
     animation: swing 1s ease;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+}
+
+.keyboard-row{
+    margin-bottom: 10px;
 }
 
 .page-footer {

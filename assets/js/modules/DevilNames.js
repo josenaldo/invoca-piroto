@@ -1,11 +1,10 @@
----
----
-var DevilNames = (function () {
+define("DevilNames", ['jquery', 'Constants'], function ($, Constants) {
+
     var self = this;
     self.names = null;
 
     var init = function (callback) {
-        $.get("{{ site.baseurl }}/assets/js/data/nomes.json", function (data) {
+        $.get(Constants.BASEURL + "/assets/js/data/nomes.json", function (data) {
             self.names = data;
             if (callback != null) {
                 callback(data);
@@ -24,4 +23,4 @@ var DevilNames = (function () {
         init: init,
         getRandomName: getRandomName
     };
-})();
+});
