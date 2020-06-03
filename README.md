@@ -48,3 +48,7 @@ ou
 ```shell
 pkill -u jekyll
 ```
+
+## Paleta de cores
+
+Paleta de cores: [https://www.color-hex.com/color/611f6a](https://www.color-hex.com/color/611f6a)

@@ -2,14 +2,32 @@
 // Template
 // ---------------------------------------
 
+
+//****************************************
+// Tipografia
+//****************************************
+
 h1, h2, h3, h4, h5, h6{
-    color: #4d1854;
+    color: $primary_color;
+}
+
+
+//****************************************
+// Elementos
+//****************************************
+.navbar-brand {
+    font-size: 2em;
 }
 
 .home-breadcrumb {
     .breadcrumb{
         margin-bottom: 0;
     }
+}
+
+.breadcrumb-container{
+    width: 100;
+    background-color: #e9ecef;
 }
 
 .page-footer {
