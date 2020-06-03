@@ -35,3 +35,16 @@ Após a execução do `jekyll serve`, verifique, no Kitematic, qual a o IP para 
 ```shell
 docker exec -it invocador-de-nomes-do-capeta bash
 ```
+
+
+### Se precisar reconectar num servidor que já está rodando
+
+```shell
+killall jekyll
+```
+
+ou
+
+```shell
+pkill -u jekyll
+```

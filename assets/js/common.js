@@ -10,6 +10,3 @@ requirejs.config({
         "main": "Main",
     }
 });
-
-// Chamando módulo principal para iniciar a aplicação
-requirejs(["main"]);

@@ -1,8 +1,9 @@
 ---
 title: Jogo do Enforca Piroto
 layout: default
+data_main: app-forca.js
 ---
-<div class="container">
+<div class="container" id="forcapiroto">
     <div class="row">
         <div class="col-sm text-center">
             <h1>Jogo do Enforca Piroto</h1>
@@ -10,53 +11,60 @@ layout: default
     </div>
 
     <div class="row">
-        <div class="col-sm text-center">
-            <img src="{{'assets/images/forca/enforcado7.jpg' | relative_url}}" alt="Enforcado">
+        <div class="col-sm text-right">
+            <img src="{{'assets/images/forca/enforcado1.jpg' | relative_url}}" alt="Enforcado">
+        </div>
+        <div class="col-sm text-left ">
+            <h2>Palavra: <span id="dashes"></span></h2>
+            <h2>Erros: <span id="misses"></span></h2>
+            <hr>
+            <h2>Vitórias: <span id="scoreboard-win">0</span></h2>
+            <h2>Derrotas: <span id="scoreboard-lost">0</span></h2>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row keyboard-row">
+        <div class="col-sm text-center">
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="Q">Q</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="W">W</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="E">E</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="R">R</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="T">T</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="Y">Y</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="U">U</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="I">I</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="O">O</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="P">P</button>
+        </div>
+    </div>
+    <div class="row keyboard-row">
+        <div class="col-sm text-center">
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="A">A</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="S">S</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="D">D</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="F">F</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="G">G</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="H">H</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="J">J</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="K">K</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="L">L</button>
+        </div>
+    </div>
+    <div class="row keyboard-row">
+        <div class="col-sm text-center">
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="Z">Z</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="X">X</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="C">C</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="V">V</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="B">B</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="N">N</button>
+            <button type="button" class="btn btn-secondary btn-letter disabled" value="M">M</button>
+        </div>
+    </div>
+
+    <div class="row keyboard-row">
         <div class="col-sm text-center ">
-            <h1 id="dashes">_ _ _ _ _ _ _ _ _ _</h1>
-        </div>
-    </div>
-
-    <div class="row keyboard-row">
-        <div class="col-sm text-center">
-            <button type="button" class="btn btn-secondary">Q</button>
-            <button type="button" class="btn btn-secondary">W</button>
-            <button type="button" class="btn btn-secondary">E</button>
-            <button type="button" class="btn btn-secondary">R</button>
-            <button type="button" class="btn btn-secondary">T</button>
-            <button type="button" class="btn btn-secondary">Y</button>
-            <button type="button" class="btn btn-secondary">U</button>
-            <button type="button" class="btn btn-secondary">I</button>
-            <button type="button" class="btn btn-secondary">O</button>
-            <button type="button" class="btn btn-secondary">P</button>
-        </div>
-    </div>
-    <div class="row keyboard-row">
-        <div class="col-sm text-center">
-            <button type="button" class="btn btn-secondary">A</button>
-            <button type="button" class="btn btn-secondary">S</button>
-            <button type="button" class="btn btn-secondary">D</button>
-            <button type="button" class="btn btn-secondary">F</button>
-            <button type="button" class="btn btn-secondary">G</button>
-            <button type="button" class="btn btn-secondary">H</button>
-            <button type="button" class="btn btn-secondary">J</button>
-            <button type="button" class="btn btn-secondary">K</button>
-            <button type="button" class="btn btn-secondary">L</button>
-        </div>
-    </div>
-    <div class="row keyboard-row">
-        <div class="col-sm text-center">
-            <button type="button" class="btn btn-secondary">Z</button>
-            <button type="button" class="btn btn-secondary">X</button>
-            <button type="button" class="btn btn-secondary">C</button>
-            <button type="button" class="btn btn-secondary">V</button>
-            <button type="button" class="btn btn-secondary">B</button>
-            <button type="button" class="btn btn-secondary">N</button>
-            <button type="button" class="btn btn-secondary">M</button>
+            <button id="btn-new-game" type="button" class="btn btn-primary">Novo Jogo</button>
         </div>
     </div>
 </div>

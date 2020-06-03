@@ -1,0 +1,59 @@
+// ---------------------------------------
+// Invocação
+// ---------------------------------------
+.speech-bubble {
+	position: relative;
+	background: $primary_color;
+    border-radius: .5em;
+    margin-bottom: 50px;
+    h1{
+        color: $white;
+    }
+    padding: 20px;
+
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 53%;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-color: $primary_color;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -25px;
+	margin-bottom: -50px;
+}
+
+.btn-devil{
+
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+
+    background-image: url("../images/user.png");
+    background-position: center;
+    border-bottom: none !important;
+    transition: all 0.5s ease-in;
+
+    //start click effect
+    &:before {
+        content: '';
+        filter: brightness(70%);
+    }
+    &:active {
+        filter: brightness(50%);
+        transition: all 0.5s ease-out;
+    }
+}
+
+.swing:hover
+{
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
