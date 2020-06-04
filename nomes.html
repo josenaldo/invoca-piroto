@@ -1,20 +1,30 @@
 ---
 title: Lista de Nomes do Capeta
 layout: default
+data_main: app-nomes.js
 ---
 
-
-<div class="container-fluid index">
+<div class="container mb-4">
   <div class="row">
 
-    <div class="col-md-12 main content-panel">
-      <h1>{{page.title}}</h1>
-      <ul>
-        {% for item in site.data.nomes %}
-        <li class="lista-nome-do-capeta">{{item}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+    <div class="col-sm content-panel">
 
+      <table id="nomes" class="display table table-striped table-bordered dt-responsive">
+        <thead>
+          <tr>
+            <th class="text-primary"><h4>
+              Nome do Capeta
+            </h4></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in site.data.nomes %}
+          <tr>
+            <td class="font-weight-bold text-primary">{{item}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
