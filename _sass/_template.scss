@@ -85,3 +85,16 @@ h1, h2, h3, h4, h5, h6{
         color: $white;
     }
 }
+
+
+.card:not(.no-hover):hover {
+    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+    transform: none;
+}
+
+.card {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+    transition: none;
+}
