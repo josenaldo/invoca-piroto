@@ -7,7 +7,7 @@ baseurl: "/invocador-de-nomes-do-capeta"
 url: "http://josenaldo.github.io"
 title_description: "Clique para invocar um novo nome do Tinhoso!"
 title_image: "/invocador-de-nomes-do-capeta/assets/images/user.png"
-google_analytics: 
+google_analytics:
 disqus_account: 
 github_repository: https://github.com/josenaldo/invocador-de-nomes-do-capeta
 post_limit: 5
@@ -18,7 +18,7 @@ twitter:
   card: summary_large_image
 
 #logo
-logo: "/invocador-de-nomes-do-capeta/assets/images/logo.png"
+logo: "/invocador-de-nomes-do-capeta/assets/images/logo.jpg"
 
 social:
   name: Vudu Reverso
