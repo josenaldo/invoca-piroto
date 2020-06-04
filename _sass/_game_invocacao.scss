@@ -28,6 +28,24 @@
 	margin-bottom: -50px;
 }
 
+#devil-name{
+    font-size: 2rem;
+}
+#devil-name { font-size: 1rem; }
+
+@media (min-width: 576px) {
+    #devil-name { font-size: 1.25rem; }
+}
+@media (min-width: 768px) {
+    #devil-name { font-size: 1.5rem; }
+}
+@media (min-width: 992px) {
+    #devil-name { font-size: 1.75rem; }
+}
+@media (min-width: 1200px) {
+    #devil-name { font-size: 2rem; }
+}
+
 .btn-devil{
 
     display: inline-block;
