@@ -1,15 +1,15 @@
 # Site settings
 
-title: "Invocador de Nomes do Capeta"
-tagline: "Pq xingar de satanás não é suficiente"
-description: "O Invocador de Nomes do Capeta permite que você invoque um nome do capeta aleatório!"
-baseurl: "/invocador-de-nomes-do-capeta"
+title: "Invoca Piroto"
+tagline: "Porque xingar de Satanás não é suficiente!"
+description: "O Invoca Piroto é o invocador de nomes do capeta pra quem cansou de xingar de Satanás!"
+baseurl: "/invoca-piroto"
 url: "http://josenaldo.github.io"
 title_description: "Clique para invocar um novo nome do Tinhoso!"
-title_image: "/invocador-de-nomes-do-capeta/assets/images/user.png"
+title_image: "/invoca-piroto/assets/images/user.png"
 google_analytics:
-disqus_account: 
-github_repository: https://github.com/josenaldo/invocador-de-nomes-do-capeta
+disqus_account:
+github_repository: https://github.com/josenaldo/invoca-piroto
 post_limit: 5
 
 #Twitter
@@ -18,7 +18,7 @@ twitter:
   card: summary_large_image
 
 #logo
-logo: "/invocador-de-nomes-do-capeta/assets/images/logo.jpg"
+logo: "/invoca-piroto/assets/images/logo.jpg"
 
 social:
   name: Vudu Reverso
@@ -33,17 +33,16 @@ author: vudureverso
 
 # Social usernames/URLs
 twitter_username: vudureverso
-github_username:  josenaldo
+github_username: josenaldo
 instagram_username: vudureverso
 reddit_username: vudureverso
 linkedin_link: https://www.linkedin.com/in/josenaldo/
 facebook_link: https://www.facebook.com/josenaldo.matos
 email: josenaldo@gmail.com
 
-
 # Footer
-footer_left: 
-footer_right: 
+footer_left:
+footer_right:
 
 # Build settings
 markdown: kramdown
@@ -64,13 +63,13 @@ defaults:
   - scope:
       path: "assets"
     values:
-      layout: "assets"      
+      layout: "assets"
   - scope:
       path: ""
     values:
       layout: "default"
       data_main: "app-main.js"
-      image: 
+      image:
         path: "/assets/images/og-image.jpg"
         width: "1200"
         height: "630"
