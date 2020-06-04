@@ -1,9 +1,9 @@
 // ---------------------------------------
-// Invocação
+// Game - Invocação
 // ---------------------------------------
 .speech-bubble {
 	position: relative;
-	background: $primary_color;
+	background: $color-primary;
     border-radius: .5em;
     margin-bottom: 50px;
     h1{
@@ -21,7 +21,7 @@
 	width: 0;
 	height: 0;
 	border: 50px solid transparent;
-	border-top-color: $primary_color;
+	border-top-color: $color-primary;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -25px;

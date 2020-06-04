@@ -1,2 +1,62 @@
-$white: #FFFFFF;
-$primary-color: #611F6A;
+// ---------------------------------------
+// Cores - Escala de cinza
+// ---------------------------------------
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// ---------------------------------------
+// Cores - Primeiro plano
+// ---------------------------------------
+$color-primary: #611F6A;
+$color-secondary: #071D5C;
+$color-success: #007A5B;
+$color-info: #1264A4;
+$color-warning: #ECB22F;
+$color-danger: #E01E5B;
+$color-light: #EBEAEB;
+$color-white: #fff;
+$color-neutral: #fff;
+$color-dark: #212529;
+$color-body: #212529;
+$color-muted: #6c757d;
+$color-white: #fff;
+$color-black-50: rgba(0, 0, 0, .5);
+$color-white-50: rgba(255, 255, 255, .5);
+
+// ---------------------------------------
+// Cores - Plano de fundo
+// ---------------------------------------
+$bg-primary: #4A154B;
+$bg-secondary: #091A3D;
+$bg-success: #2EB67D;
+$bg-info: #167895;
+$bg-warning: #EBB12B;
+$bg-danger: #EB616A;
+$bg-light: #F7F7F7;
+$bg-white: #fff;
+$bg-neutral: #fff;
+$bg-dark: #1D1C1D;
+
+// ---------------------------------------
+// Cores - Fundo
+// ---------------------------------------
+$filter-primary: #3d1343;
+$filter-secondary: #030e2d;
+$filter-success: #004735;
+$filter-info: #0d4876;
+$filter-warning: #d59913;
+$filter-danger: #b31849;
+$filter-white: #e6e6e6;
+$filter-neutral: #e6e6e6;
+$filter-light: #d2d0d2;
+$filter-dark: #0a0c0d;
