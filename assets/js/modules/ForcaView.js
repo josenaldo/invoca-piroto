@@ -1,124 +1,175 @@
 define("ForcaView",
     ['jquery', 'Constants', 'Forca', 'EventManager'],
-    function ($, Constants, Forca, EventManager ) {
+    function ($, Constants, Forca, EventManager) {
 
-    var init = function () {
-        EventManager.subscribe(Constants.GAME_CREATED_EVENT, changeToGameCreatedState);
-        EventManager.subscribe(Constants.GAME_STARTED_EVENT, changeToGameStartedState);
-        EventManager.subscribe(Constants.GAME_RUNNING_EVENT, changeToGameRunningState);
-        EventManager.subscribe(Constants.GAME_LOST_EVENT, changeToGameLostState);
-        EventManager.subscribe(Constants.GAME_WON_EVENT, changeToGameWonState);
-    }
+        var init = function () {
+            EventManager.subscribe(Constants.EVENTS.GAME_CREATED_EVENT, changeToGameCreatedState);
+            EventManager.subscribe(Constants.EVENTS.GAME_STARTED_EVENT, changeToGameStartedState);
+            EventManager.subscribe(Constants.EVENTS.GAME_RUNNING_EVENT, changeToGameRunningState);
+            EventManager.subscribe(Constants.EVENTS.GAME_LOST_EVENT, changeToGameLostState);
+            EventManager.subscribe(Constants.EVENTS.GAME_WON_EVENT, changeToGameWonState);
+        }
 
-    var updateHangman= function (num) {
-        $("#hangman-pic").attr("src",Constants.HANGED[num]);
-    }
+        var updateHangman = function (num) {
+            $("#hangman-pic").attr("src", Constants.HANGED[num]);
+        }
 
-    var updateWordDashes = function() {
-        value = Forca.getWordDashes();
-        $("#dashes").html(value);
-    }
+        var updateSecret = function (secret) {
+            $(".secret").text(secret)
+        }
 
-    var updateMisses = function(value) {
-        value = Forca.getMisses();
-        $("#misses").html(value);
-    }
+        var updateWordDashes = function () {
+            value = Forca.getWordDashes();
+            $("#dashes").html(value);
+        }
 
-    var updateWin = function () {
-        value = Forca.getWin();
-        $("#win").html(value);
-    }
+        var updateMisses = function () {
+            value = Forca.getMisses();
+            $("#misses").html(value);
+        }
 
-    var updateLost = function () {
-        value = Forca.getLost()
-        $("#lost").html(value);
-    }
+        var updateWin = function () {
+            value = Forca.getWin();
+            $("#scoreboard-win").html(value);
+        }
 
-    var resetKeyboard = function () {
-        $('.btn-letter').prop('disabled', false);
-        $('.btn-letter').addClass("btn-primary");
-        $('.btn-letter').removeClass("btn-light");
-        $('.btn-letter').removeClass("btn-succes");
-        $('.btn-letter').removeClass("btn-danger");
-    }
+        var updateLost = function () {
+            value = Forca.getLost()
+            $("#scoreboard-lost").html(value);
+        }
 
-    var changeToGameCreatedState = function (data) {
+        var resetKeyboard = function () {
+            $('.btn-letter').prop('disabled', false);
+            $('.btn-letter').addClass("btn-primary");
+            $('.btn-letter').removeClass("btn-light");
+            $('.btn-letter').removeClass("btn-success");
+            $('.btn-letter').removeClass("btn-danger");
+        }
 
-        // Hangman 0
-        updateHangman(0);
-
-        // Teclado desabilitado
-        $('.btn-letter').prop('disabled', true);
-
-        // Palavra vazia
-        updateWordDashes();
-        updateMisses();
-
-        // Vitória com 0
-        updateWin();
-
-        // Derrota com 0
-        updateLost();
-    }
-
-    var changeToGameStartedState = function (data) {
-        // Hangman 1
-        updateHangman(0);
-
-        // Teclado habilitado
-        resetKeyboard();
-
-        // Palavra vazia
-        updateWordDashes();
-        updateMisses();
-
-        // Vitória com último valor
-        updateWin();
-
-        // Derrota com último valor
-        updateLost();
-
-    }
-
-    var changeToGameRunningState = function (data) {
-        // Hangman de acordo com o número de erros
-        // Teclado habilitado, com letras escolhidas desabilitadas
+        var processPlayerMove = function (data) {
+            // Teclado habilitado, com letras escolhidas desabilitadas
             // acertos em verde
             // erros em vermelho
-        // Palavra com caracteres acertados à mostra
-        // Vitória com último valor
-        // Derrota com último valor
-    }
+            playerMove = data.playerMove;
+            isError = data.isError;
 
-    var changeToGameLostState = function (data) {
-        // Hangman 7
-        // Mensagem de fim de jogo, estilo erro, indicando falha e com palavra secreta
-        // Teclado desabilitado
-            // acertos em verde
-            // erros em vermelho
-        // Palavra com caracteres acertados à mostra, toda em vermelho
-        // Vitória com último valor
-        // Derrota com último valor
+            // button = $("button:contains(" + playerMove + ")")
 
-    }
+            button = $("#btn_" + playerMove)
+            button.removeClass("btn-primary");
+            button.prop('disabled', true);
+            if (isError) {
+                button.addClass("btn-danger");
+            } else {
+                button.addClass("btn-success");
+            }
+        }
 
-    var changeToGameWonState = function (data) {
-        // Hangman - útimo valor
-        // Mensagem de fim de jogo, estilo suesso, indicando vitória e com palavra secreta
-        // Teclado desabilitado
-            // acertos em verde
-            // erros em vermelho
-        // Palavra com caracteres acertados à mostra, toda em verde
-        // Vitória com último valor
-        // Derrota com último valor
-    }
+        var changeToGameCreatedState = function (data) {
 
-    return {
-        init: init,
-        changeToGameCreatedState: changeToGameCreatedState,
-        changeToGameStartedState: changeToGameStartedState,
-        changeToGameRunningState: changeToGameRunningState,
-        changeToGameLostState: changeToGameLostState,
-        changeToGameWonState: changeToGameWonState,
-    }
-});
+            updateSecret(null);
+
+            // Hangman 0
+            updateHangman(0);
+
+            // Teclado desabilitado
+            $('.btn-letter').prop('disabled', true);
+
+            // Palavra vazia
+            updateWordDashes();
+            updateMisses();
+
+            // Atualiza placar
+            updateWin();
+            updateLost();
+        }
+
+        var changeToGameStartedState = function (data) {
+            updateSecret(null);
+
+            // Hangman 1
+            updateHangman(0);
+
+            // Teclado habilitado
+            resetKeyboard();
+
+            // Palavra vazia
+            updateWordDashes();
+            updateMisses();
+
+            // Atualiza placar
+            updateWin();
+            updateLost();
+
+        }
+
+        var changeToGameRunningState = function (data) {
+            updateSecret(null);
+
+            // Processa entrada do usuário
+            processPlayerMove(data);
+
+            // Atualiza hud
+            updateWordDashes();
+            updateMisses();
+            updateHangman(Forca.getErrors());
+
+            // Atualiza placar
+            updateWin();
+            updateLost();
+        }
+
+        var changeToGameLostState = function (data) {
+
+            // Processa entrada do usuário
+            processPlayerMove(data);
+
+            // Atualiza hud
+            updateSecret(Forca.getSecret());
+            updateWordDashes();
+            updateMisses();
+            updateHangman(Forca.getErrors());
+
+            // Atualiza placar
+            updateWin();
+            updateLost();
+
+            // Mensagem de fim de jogo, estilo erro, indicando falha e com palavra secreta
+            $('#modalLost').modal('toggle');
+
+            // Teclado desabilitado
+            $('.btn-letter').prop('disabled', true);
+
+        }
+
+        var changeToGameWonState = function (data) {
+
+            // Processa entrada do usuário
+            processPlayerMove(data);
+
+            // Atualiza hud
+            updateSecret(Forca.getSecret());
+            updateWordDashes();
+            updateMisses();
+            updateHangman(Forca.getErrors());
+
+            // Atualiza placar
+            updateWin();
+            updateLost();
+
+            // Mensagem de fim de jogo, estilo erro, indicando falha e com palavra secreta
+            $('#modalWon').modal('toggle');
+
+            // Teclado desabilitado
+            $('.btn-letter').prop('disabled', true);
+        }
+
+        return {
+            init: init,
+            changeToGameCreatedState: changeToGameCreatedState,
+            changeToGameStartedState: changeToGameStartedState,
+            changeToGameRunningState: changeToGameRunningState,
+            changeToGameLostState: changeToGameLostState,
+            changeToGameWonState: changeToGameWonState,
+        }
+    });

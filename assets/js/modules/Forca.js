@@ -22,7 +22,7 @@ define("Forca",
         misses = [];
         DevilNames.init(function () {
             selectSecretDevilName()
-            EventManager.publish(Constants.GAME_STARTED_EVENT, this);
+            EventManager.publish(Constants.EVENTS.GAME_STARTED_EVENT, this);
         })
     };
 
@@ -81,45 +81,40 @@ define("Forca",
 
     var readPlayerMove = function(playerMove){
 
-        found = false;
+        isError = true;
 
         for (i = 0 ; i < secret.length ; i++){
             letter = secret[i]
 
-            if (letter == playerMove.toUpperCase()) {
+            if (letter.toUpperCase() == playerMove.toUpperCase()) {
                 wordDashes[i] = letter
-                found = true;
+                isError = false;
             }
         }
 
-        if(!found){
+        if(isError){
             errors += 1
             misses.push(playerMove)
         }
-        verifyContinue();
-        showScore();
-    }
 
-    var verifyContinue = function() {
         secretasStr = getSecret();
         wordDashesAsStr = getWordDashes();
 
         success = secretasStr === wordDashesAsStr
-        hanged = errors === 6
-    }
-
-    var showScore = function() {
-
-        document.getElementById("dashes").innerHTML = wordDashes.join("");
-        document.getElementById("misses").innerHTML = misses.join("");
-
+        hanged = errors === (Constants.HANGED.length - 1)
 
         if (success){
-            message = "Parabéns, você acertou o nome do capeta!";
-            alert(message);
+            win++;
+            EventManager.publish(Constants.EVENTS.GAME_WON_EVENT, this);
+
         }else if(hanged) {
-            message = "Pena, você foi enforcado!";
-            alert(message);
+            lost++;
+            EventManager.publish(Constants.EVENTS.GAME_LOST_EVENT, this);
+        } else {
+            EventManager.publish(Constants.EVENTS.GAME_RUNNING_EVENT, {
+                playerMove: playerMove,
+                isError: isError
+            });
         }
     }
 
@@ -132,6 +127,7 @@ define("Forca",
         init: init,
         run: run,
         readPlayerMove: readPlayerMove,
+        getSecret: getSecret,
         getWordDashes: getWordDashes,
         getErrors: getErrors,
         getMisses: getMisses,

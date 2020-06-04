@@ -25,47 +25,91 @@ data_main: app-forca.js
 
     <div class="row keyboard-row">
         <div class="col-sm text-center">
-            <button type="button" class="btn btn-light btn-letter" value="Q" disabled>Q</button>
-            <button type="button" class="btn btn-light btn-letter" value="W" disabled>W</button>
-            <button type="button" class="btn btn-light btn-letter" value="E" disabled>E</button>
-            <button type="button" class="btn btn-light btn-letter" value="R" disabled>R</button>
-            <button type="button" class="btn btn-light btn-letter" value="T" disabled>T</button>
-            <button type="button" class="btn btn-light btn-letter" value="Y" disabled>Y</button>
-            <button type="button" class="btn btn-light btn-letter" value="U" disabled>U</button>
-            <button type="button" class="btn btn-light btn-letter" value="I" disabled>I</button>
-            <button type="button" class="btn btn-light btn-letter" value="O" disabled>O</button>
-            <button type="button" class="btn btn-light btn-letter" value="P" disabled>P</button>
+            <button type="button" class="btn btn-light btn-letter" value="Q" id="btn_Q" disabled>Q</button>
+            <button type="button" class="btn btn-light btn-letter" value="W" id="btn_W" disabled>W</button>
+            <button type="button" class="btn btn-light btn-letter" value="E" id="btn_E" disabled>E</button>
+            <button type="button" class="btn btn-light btn-letter" value="R" id="btn_R" disabled>R</button>
+            <button type="button" class="btn btn-light btn-letter" value="T" id="btn_T" disabled>T</button>
+            <button type="button" class="btn btn-light btn-letter" value="Y" id="btn_Y" disabled>Y</button>
+            <button type="button" class="btn btn-light btn-letter" value="U" id="btn_U" disabled>U</button>
+            <button type="button" class="btn btn-light btn-letter" value="I" id="btn_I" disabled>I</button>
+            <button type="button" class="btn btn-light btn-letter" value="O" id="btn_O" disabled>O</button>
+            <button type="button" class="btn btn-light btn-letter" value="P" id="btn_P" disabled>P</button>
         </div>
     </div>
     <div class="row keyboard-row">
         <div class="col-sm text-center">
-            <button type="button" class="btn btn-light btn-letter" value="A" disabled>A</button>
-            <button type="button" class="btn btn-light btn-letter" value="S" disabled>S</button>
-            <button type="button" class="btn btn-light btn-letter" value="D" disabled>D</button>
-            <button type="button" class="btn btn-light btn-letter" value="F" disabled>F</button>
-            <button type="button" class="btn btn-light btn-letter" value="G" disabled>G</button>
-            <button type="button" class="btn btn-light btn-letter" value="H" disabled>H</button>
-            <button type="button" class="btn btn-light btn-letter" value="J" disabled>J</button>
-            <button type="button" class="btn btn-light btn-letter" value="K" disabled>K</button>
-            <button type="button" class="btn btn-light btn-letter" value="L" disabled>L</button>
+            <button type="button" class="btn btn-light btn-letter" value="A" id="btn_A" disabled>A</button>
+            <button type="button" class="btn btn-light btn-letter" value="S" id="btn_S" disabled>S</button>
+            <button type="button" class="btn btn-light btn-letter" value="D" id="btn_D" disabled>D</button>
+            <button type="button" class="btn btn-light btn-letter" value="F" id="btn_F" disabled>F</button>
+            <button type="button" class="btn btn-light btn-letter" value="G" id="btn_G" disabled>G</button>
+            <button type="button" class="btn btn-light btn-letter" value="H" id="btn_H" disabled>H</button>
+            <button type="button" class="btn btn-light btn-letter" value="J" id="btn_J" disabled>J</button>
+            <button type="button" class="btn btn-light btn-letter" value="K" id="btn_K" disabled>K</button>
+            <button type="button" class="btn btn-light btn-letter" value="L" id="btn_L" disabled>L</button>
         </div>
     </div>
     <div class="row keyboard-row">
         <div class="col-sm text-center">
-            <button type="button" class="btn btn-light btn-letter" value="Z" disabled>Z</button>
-            <button type="button" class="btn btn-light btn-letter" value="X" disabled>X</button>
-            <button type="button" class="btn btn-light btn-letter" value="C" disabled>C</button>
-            <button type="button" class="btn btn-light btn-letter" value="V" disabled>V</button>
-            <button type="button" class="btn btn-light btn-letter" value="B" disabled>B</button>
-            <button type="button" class="btn btn-light btn-letter" value="N" disabled>N</button>
-            <button type="button" class="btn btn-light btn-letter" value="M" disabled>M</button>
+            <button type="button" class="btn btn-light btn-letter" value="Z" id="btn_Z" disabled>Z</button>
+            <button type="button" class="btn btn-light btn-letter" value="X" id="btn_X" disabled>X</button>
+            <button type="button" class="btn btn-light btn-letter" value="C" id="btn_C" disabled>C</button>
+            <button type="button" class="btn btn-light btn-letter" value="V" id="btn_V" disabled>V</button>
+            <button type="button" class="btn btn-light btn-letter" value="B" id="btn_B" disabled>B</button>
+            <button type="button" class="btn btn-light btn-letter" value="N" id="btn_N" disabled>N</button>
+            <button type="button" class="btn btn-light btn-letter" value="M" id="btn_M" disabled>M</button>
         </div>
     </div>
 
     <div class="row keyboard-row">
         <div class="col-sm text-center ">
-            <button id="btn-new-game" type="button" class="btn btn-primary">Novo Jogo</button>
+            <button type="button" class="btn btn-primary btn-new-game">Novo Jogo</button>
         </div>
     </div>
 
+</div>
+
+<!-- Modal ganhou -->
+<div class="modal fade" id="modalWon" tabindex="-1" role="dialog"
+    aria-labelledby="modalWonLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-success" id="modalWonLabel">Parabéns</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Você invocou <strong><span class="secret"></span></strong>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal perdeu -->
+<div class="modal fade" id="modalLost" tabindex="-1" role="dialog"
+    aria-labelledby="modalLostLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="modalLostLabel">Que pena</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Você não conseguiu invocar <strong><span class="secret"></span></strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
 </div>
