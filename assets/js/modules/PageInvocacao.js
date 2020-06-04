@@ -1,5 +1,5 @@
 define(
-    ["jquery", "DevilNames"],
+    ["jquery", "DevilNames", "popper", "bootstrap"],
     function ( $, DevilNames ) {
 
         DevilNames.init(function (data) {

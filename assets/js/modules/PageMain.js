@@ -1,6 +1,6 @@
 define(
-    ["jquery"],
+    ["jquery", "popper", "bootstrap"],
     function ( $ ) {
-
+        
     }
 );

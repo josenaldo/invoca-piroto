@@ -1,7 +1,8 @@
 define(
-    ["jquery", "datatables.bootstrap" ],
+    ["jquery", , "popper", "bootstrap", "datatables.bootstrap" ],
     function ( $, ) {
         $(document).ready(function() {
+            $.fn.DataTable.ext.pager.numbers_length = 5;
             $('#nomes').dataTable({
                 "paging":   true,
                 "ordering": true,
@@ -16,10 +17,10 @@ define(
                     "infoEmpty": "Nenhum capiroto no inferno",
                     "infoFiltered": "(filtrado de _MAX_ total de capirotos)",
                     "paginate":{
-                        "first": "Primeiro",
-                        "previous": "Anterior",
-                        "next": "Próximo",
-                        "last": "Último",
+                        "first": "<<",
+                        "previous": "<",
+                        "next": ">",
+                        "last": ">>",
                     }
                 }
 

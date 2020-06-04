@@ -1,5 +1,5 @@
 define(
-    ["jquery", "Forca", "ForcaView", "bootstrap"],
+    ["jquery", "Forca", "ForcaView", , "popper", "bootstrap"],
     function ($, Forca, ForcaView) {
 
         ForcaView.init();
