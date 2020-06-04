@@ -71,6 +71,6 @@ defaults:
       layout: "default"
       data_main: "app-main.js"
       image: 
-        path: "/assets/images/og-image.png"
+        path: "/assets/images/og-image.jpg"
         width: "1200"
         height: "630"
