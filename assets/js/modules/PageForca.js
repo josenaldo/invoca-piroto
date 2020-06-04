@@ -1,8 +1,10 @@
 define(
     ["jquery", "Forca", "ForcaView"],
-    function ( $, Forca, ForcaView ) {
+    function ($, Forca, ForcaView) {
 
-        ForcaView.changeToBeforeGameState()
+
+        ForcaView.init();
+        ForcaView.changeToGameCreatedState(null);
 
         $("#btn-new-game").click(function () {
             Forca.run();
@@ -10,7 +12,10 @@ define(
 
         $(".btn-letter").click(function () {
             Forca.readPlayerMove($(this).attr("value"));
+
         });
+
 
     }
 );
+

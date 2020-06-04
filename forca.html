@@ -12,7 +12,7 @@ data_main: app-forca.js
 
     <div class="row">
         <div class="col-sm text-right">
-            <img src="{{'assets/images/forca/enforcado1.jpg' | relative_url}}" alt="Enforcado">
+            <img id="hangman-pic" src="{{'assets/images/forca/enforcado1.jpg' | relative_url}}" alt="Enforcado">
         </div>
         <div class="col-sm text-left ">
             <h2>Palavra: <span id="dashes"></span></h2>
@@ -25,40 +25,40 @@ data_main: app-forca.js
 
     <div class="row keyboard-row">
         <div class="col-sm text-center">
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="Q">Q</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="W">W</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="E">E</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="R">R</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="T">T</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="Y">Y</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="U">U</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="I">I</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="O">O</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="P">P</button>
+            <button type="button" class="btn btn-light btn-letter" value="Q" disabled>Q</button>
+            <button type="button" class="btn btn-light btn-letter" value="W" disabled>W</button>
+            <button type="button" class="btn btn-light btn-letter" value="E" disabled>E</button>
+            <button type="button" class="btn btn-light btn-letter" value="R" disabled>R</button>
+            <button type="button" class="btn btn-light btn-letter" value="T" disabled>T</button>
+            <button type="button" class="btn btn-light btn-letter" value="Y" disabled>Y</button>
+            <button type="button" class="btn btn-light btn-letter" value="U" disabled>U</button>
+            <button type="button" class="btn btn-light btn-letter" value="I" disabled>I</button>
+            <button type="button" class="btn btn-light btn-letter" value="O" disabled>O</button>
+            <button type="button" class="btn btn-light btn-letter" value="P" disabled>P</button>
         </div>
     </div>
     <div class="row keyboard-row">
         <div class="col-sm text-center">
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="A">A</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="S">S</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="D">D</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="F">F</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="G">G</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="H">H</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="J">J</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="K">K</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="L">L</button>
+            <button type="button" class="btn btn-light btn-letter" value="A" disabled>A</button>
+            <button type="button" class="btn btn-light btn-letter" value="S" disabled>S</button>
+            <button type="button" class="btn btn-light btn-letter" value="D" disabled>D</button>
+            <button type="button" class="btn btn-light btn-letter" value="F" disabled>F</button>
+            <button type="button" class="btn btn-light btn-letter" value="G" disabled>G</button>
+            <button type="button" class="btn btn-light btn-letter" value="H" disabled>H</button>
+            <button type="button" class="btn btn-light btn-letter" value="J" disabled>J</button>
+            <button type="button" class="btn btn-light btn-letter" value="K" disabled>K</button>
+            <button type="button" class="btn btn-light btn-letter" value="L" disabled>L</button>
         </div>
     </div>
     <div class="row keyboard-row">
         <div class="col-sm text-center">
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="Z">Z</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="X">X</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="C">C</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="V">V</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="B">B</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="N">N</button>
-            <button type="button" class="btn btn-secondary btn-letter disabled" value="M">M</button>
+            <button type="button" class="btn btn-light btn-letter" value="Z" disabled>Z</button>
+            <button type="button" class="btn btn-light btn-letter" value="X" disabled>X</button>
+            <button type="button" class="btn btn-light btn-letter" value="C" disabled>C</button>
+            <button type="button" class="btn btn-light btn-letter" value="V" disabled>V</button>
+            <button type="button" class="btn btn-light btn-letter" value="B" disabled>B</button>
+            <button type="button" class="btn btn-light btn-letter" value="N" disabled>N</button>
+            <button type="button" class="btn btn-light btn-letter" value="M" disabled>M</button>
         </div>
     </div>
 
@@ -67,4 +67,5 @@ data_main: app-forca.js
             <button id="btn-new-game" type="button" class="btn btn-primary">Novo Jogo</button>
         </div>
     </div>
+
 </div>

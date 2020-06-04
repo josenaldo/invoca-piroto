@@ -1,16 +1,16 @@
 define("Forca",
-    ['jquery', 'Constants', 'DevilNames', 'ForcaView'],
-    function ($, Constants, DevilNames, ForcaView) {
+    ['Constants', 'DevilNames', 'EventManager'],
+    function (Constants, DevilNames, EventManager) {
 
     var self = this;
     var secret = [];
     var success = false;
     var hanged = false;
-    var guess = null;
     var wordDashes = [];
     var errors = 0;
     var misses = [];
-
+    var win = 0;
+    var lost = 0;
 
     var init = function () {
         secret = [];
@@ -22,8 +22,33 @@ define("Forca",
         misses = [];
         DevilNames.init(function () {
             selectSecretDevilName()
+            EventManager.publish(Constants.GAME_STARTED_EVENT, this);
         })
     };
+
+    var getSecret = function () {
+        return secret.join("");
+    }
+
+    var getWordDashes = function () {
+        return wordDashes.join("");
+    }
+
+    var getErrors = function () {
+        return errors;
+    }
+
+    var getMisses = function () {
+        return misses.join("")
+    }
+
+    var getWin = function () {
+        return win;
+    }
+
+    var getLost = function () {
+        return lost;
+    }
 
     var selectSecretDevilName = function () {
         secret = DevilNames.getRandomName().split("");
@@ -39,8 +64,6 @@ define("Forca",
                 wordDashes[i] = letter
             }
         }
-
-        document.getElementById("dashes").innerHTML = wordDashes.join("");
     }
 
     var isAlpha = function (str) {
@@ -78,10 +101,10 @@ define("Forca",
     }
 
     var verifyContinue = function() {
-        secretasString = secret.join("");
-        wordDashesAsString = wordDashes.join("");
+        secretasStr = getSecret();
+        wordDashesAsStr = getWordDashes();
 
-        success = secretasString === wordDashesAsString
+        success = secretasStr === wordDashesAsStr
         hanged = errors === 6
     }
 
@@ -98,14 +121,10 @@ define("Forca",
             message = "Pena, você foi enforcado!";
             alert(message);
         }
-
-
     }
 
     var run = function () {
         init();
-        showScore();
-        ForcaView.changeToInGameState()
     };
 
     // Public API
@@ -113,5 +132,11 @@ define("Forca",
         init: init,
         run: run,
         readPlayerMove: readPlayerMove,
+        getWordDashes: getWordDashes,
+        getErrors: getErrors,
+        getMisses: getMisses,
+        getWin: getWin,
+        getLost: getLost,
+
     };
 });
