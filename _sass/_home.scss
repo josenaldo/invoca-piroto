@@ -1,11 +1,3 @@
 // ---------------------------------------
 // Home
 // ---------------------------------------
-
-.jumbotron-invocador{
-    background-image: url("{{'/assets/images/nome-bg.png' | relative_url}}");
-
-    h1{
-        color: $color-primary;
-    }
-}
